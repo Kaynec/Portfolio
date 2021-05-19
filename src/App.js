@@ -1,5 +1,11 @@
 import React from "react";
-
+import { Typography, Link } from "@material-ui/core";
+import { Navbar } from "./navbar";
 export const App = () => {
-  return <div> Salam </div>;
+  const preventDefault = (e) => e.preventDefault();
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };

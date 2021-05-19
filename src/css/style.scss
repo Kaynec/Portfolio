@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: hsl(250, 50%, 3%);
+}
+.button {
+  color: white;
+}
+.nav-bar {
+  background: hsl(250, 50%, 3%);
+  color: white;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  a {
+  }
+}
