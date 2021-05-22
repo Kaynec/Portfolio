@@ -2,10 +2,10 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) =>
   createStyles({
     footerIcons: {
-      fontSize: "large",
+      fontSize: "3rem",
     },
     footer: {
-      padding: "3rem",
+      padding: "10rem 0",
       marginTop: "10rem",
       borderTop: "2px solid cyan ",
     },

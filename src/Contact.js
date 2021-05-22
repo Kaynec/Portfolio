@@ -37,7 +37,10 @@ const Contact = () => {
               window.open("https://www.linkedin.com/in/ali-ozbak-26884120b/")
             }
           >
-            <LinkedInIcon aria-label="https://www.linkedin.com/in/ali-ozbak-26884120b/">
+            <LinkedInIcon
+              className={classes.footerIcons}
+              aria-label="https://www.linkedin.com/in/ali-ozbak-26884120b/"
+            >
               <LinkedInIcon fontSize="large" />
             </LinkedInIcon>
           </IconButton>
@@ -52,7 +55,10 @@ const Contact = () => {
         >
           <Typography variant="h5">My GitHub :</Typography>
           <IconButton onClick={() => window.open("https://github.com/Kaynec")}>
-            <GitHubIcon aria-label="https://github.com/Kaynec">
+            <GitHubIcon
+              className={classes.footerIcons}
+              aria-label="https://github.com/Kaynec"
+            >
               <GitHubIcon fontSize="large" />
             </GitHubIcon>
           </IconButton>
@@ -68,7 +74,10 @@ const Contact = () => {
         >
           <Typography variant="h5">My Email:</Typography>
           <IconButton onClick={() => window.open("https://github.com/Kaynec")}>
-            <EmailIcon aria-label="https://github.com/Kaynec">
+            <EmailIcon
+              className={classes.footerIcons}
+              aria-label="https://github.com/Kaynec"
+            >
               <GitHubIcon fontSize="large" />
             </EmailIcon>
           </IconButton>
