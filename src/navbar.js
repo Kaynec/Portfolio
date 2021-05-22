@@ -1,64 +1,52 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Button,
-} from "@material-ui/core";
-
-const useStyles = makeStyles({
-  AppBar: {
-    display: "flex",
-    justifyItems: "flex-end",
-    justifyContent: "flex-end",
-    background: "transparent",
-  },
-  button: {
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-    border: 0,
-    borderRadius: 3,
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-    color: "white",
-    height: 48,
-    padding: "0 30px",
-    marginInline: ".5rem",
-  },
-});
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { AppBar, Toolbar, IconButton, Link } from "@material-ui/core";
+import { useStyles } from "./styles.js";
 
 export const Navbar = () => {
   const classes = useStyles();
   return (
     <>
-      {/* <AppBar position="sticky" className={classes.AppBar}>
-        <Toolbar>
-          <IconButton
-            edge="end"
-            aria-label="menu"
-            className={classes.AppBar}
-          ></IconButton>
-          <Button className={classes.button}>About</Button>
-          <Button className={classes.button}>Projects</Button>
+      <AppBar position="sticky" className={classes.AppBar}>
+        <Toolbar className={classes.Toolbar}>
+          <div>
+            <IconButton
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/ali-ozbak-26884120b/")
+              }
+            >
+              <LinkedInIcon
+                className={classes.GitHubIcon}
+                aria-label="https://www.linkedin.com/in/ali-ozbak-26884120b/"
+              >
+                <LinkedInIcon fontSize="large" />
+              </LinkedInIcon>
+            </IconButton>
+            <IconButton
+              onClick={() => window.open("https://github.com/Kaynec")}
+            >
+              <GitHubIcon
+                className={classes.GitHubIcon}
+                aria-label="https://github.com/Kaynec"
+              >
+                <GitHubIcon fontSize="large" />
+              </GitHubIcon>
+            </IconButton>
+          </div>
+          <div>
+            <Link className={classes.Link} href="#">
+              About
+            </Link>
+            <Link className={classes.Link} href="#Projects">
+              Projects
+            </Link>
+            <Link className={classes.Link} href="#Contact">
+              Contact Me
+            </Link>
+          </div>
         </Toolbar>
-      </AppBar> */}
-      <nav className="nav-bar">
-        <a href="#">Logo</a>
-        <ul>
-          <li>
-            <a href="#Home">Home</a>{" "}
-          </li>
-          <li>
-            <a href="#About">About</a>
-          </li>
-          <li>
-            <a href="#Projects">Projects</a>
-          </li>
-          <li>
-            <a href="#Contact Me">Contact Me</a>
-          </li>
-        </ul>
-      </nav>
+      </AppBar>
     </>
   );
 };
